@@ -1,0 +1,18 @@
+.description-container {
+  padding: 32px 0;
+}
+
+.description-container h2 {
+  text-transform: uppercase;
+  color: hsl(26, 100%, 55%);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.description-container .title {
+  font-size: 2.3rem;
+}
+
+.description {
+  color: hsl(219, 9%, 45%);
+}

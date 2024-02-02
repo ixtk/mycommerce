@@ -41,8 +41,36 @@
   transform: translateY(-50%);
 }
 
+.thumbnails {
+  display: none;
+  column-gap: 16px;
+  justify-content: space-between;
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+.thumbnails button {
+  width: calc(25% - 20px);
+  margin: 0;
+  outline-offset: 4px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
 @media only screen and (min-width: 900px) {
   .control-btn {
     display: none;
+  }
+
+  .thumbnails {
+    display: flex;
+  }
+
+  .img-container img.active {
+    border-radius: 15px;
+  }
+
+  .carousel {
+    background: none;
   }
 }
