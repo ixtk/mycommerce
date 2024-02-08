@@ -1,0 +1,55 @@
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.list-header .long {
+  display: none;
+}
+
+.list-header .add-btn {
+  background: var(--orange);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: var(--border-radius);
+}
+
+.review p {
+  color: var(--dark-grayish-blue);
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-container {
+  margin-top: 2rem;
+}
+
+.review img {
+  max-width: 50px;
+}
+
+@media only screen and (min-width: 900px) {
+  .review-list {
+    max-width: 600px;
+  }
+
+  .list-header .long {
+    display: block;
+  }
+
+  .list-header .short {
+    display: none;
+  }
+
+  .list-header .add-btn {
+    padding: 16px 40px;
+  }
+}
