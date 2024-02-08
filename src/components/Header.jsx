@@ -33,10 +33,14 @@ export const Header = () => {
         </nav>
       </div>
 
-      <div className="header-col">
+      <div className="header-col cart-reference">
         <button className="cart-btn">
           <img src={cartUrl} alt="cart icon" />
         </button>
+        <div className="cart">
+          <h3>Cart</h3>
+          <div className="cart-list"></div>
+        </div>
         <img
           className="avatar-img"
           src={`${assetsBaseUrl}/${loggedInUser.profileImage}`}
