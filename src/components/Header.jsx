@@ -1,6 +1,7 @@
 import menuIconUrl from "../assets/icon-menu.svg"
 import logoUrl from "../assets/logo.svg"
 import cartUrl from "../assets/icon-cart.svg"
+import closeIcon from "../assets/icon-close.svg"
 import { assetsBaseUrl, loggedInUser } from "../data"
 import "../styles/Header.css"
 
@@ -13,6 +14,9 @@ export const Header = () => {
         </button>
         <img className="logo" src={logoUrl} alt="Sneakers logo" />
         <nav>
+          <button className="close-btn">
+            <img src={closeIcon} alt="" />
+          </button>
           <ul className="nav-list">
             <li>
               <a href="#">Collections</a>
