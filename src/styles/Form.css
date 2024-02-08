@@ -1,0 +1,75 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+form .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  border: 1px solid var(--grayish-blue);
+  width: 100%;
+  border-radius: 7px;
+  padding: 9px 12px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--grayish-blue);
+}
+
+form svg {
+  width: 35px;
+  height: 35px;
+}
+
+.star-rating button {
+  padding: 5px;
+}
+
+/* .star-rating button  button svg {
+  fill: var(--star-color);
+  stroke: var(--star-color);
+} */
+
+.error {
+  color: var(--error);
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+form .button-container {
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  gap: 16px;
+  color: var(--white);
+  margin-top: 1rem;
+  align-self: flex-end;
+}
+
+.button-container button {
+  padding: 9px 15px;
+  border-radius: 7px;
+  color: var(--white);
+}
+
+form .cancel {
+  background: var(--grayish-blue);
+}
+
+form .submit {
+  background-color: var(--orange);
+}

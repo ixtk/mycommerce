@@ -5,8 +5,8 @@ const StarIcon = ({ isFilled }) => {
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill={isFilled ? "hsl(51,96%,51%)" : "none"}
-      stroke={isFilled ? "hsl(51,96%,51%)" : "currentColor"}
+      fill={isFilled ? "var(--star-color)" : "none"}
+      stroke={isFilled ? "var(--star-color)" : "currentColor"}
       strokeWidth="1"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -16,15 +16,23 @@ const StarIcon = ({ isFilled }) => {
   )
 }
 
-export const StarRating = ({ asButton = false, rating }) => {
-  return [1, 2, 3, 4, 5].map((index) => {
-    if (asButton) {
-      return (
-        <button key={index}>
-          <StarIcon isFilled={index <= rating} />
-        </button>
-      )
-    }
-    return <StarIcon key={index} isFilled={index <= rating} />
-  })
+export const StarRating = ({ onClick, asButton = false, rating }) => {
+  return (
+    <div>
+      {[1, 2, 3, 4, 5].map((index) => {
+        if (asButton) {
+          return (
+            <button
+              onClick={() => onClick("starRating", index)}
+              type="button"
+              key={index}
+            >
+              <StarIcon isFilled={index <= rating} />
+            </button>
+          )
+        }
+        return <StarIcon key={index} isFilled={index <= rating} />
+      })}
+    </div>
+  )
 }
