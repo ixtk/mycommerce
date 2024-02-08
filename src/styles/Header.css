@@ -78,6 +78,22 @@ header .close-btn {
   width: 100%;
 }
 
+.mobile-menu {
+  display: flex;
+}
+
+.mobile-menu > button {
+  padding: 0;
+  background: hsla(0, 0%, 0%, 0.447);
+  position: fixed;
+  top: 0;
+  left: 250px;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: none;
+}
+
 @media only screen and (min-width: 500px) {
   .cart {
     min-width: 300px;

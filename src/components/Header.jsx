@@ -13,28 +13,31 @@ export const Header = () => {
           <img src={menuIconUrl} alt="Menu icon" />
         </button>
         <img className="logo" src={logoUrl} alt="Sneakers logo" />
-        <nav>
-          <button className="close-btn">
-            <img src={closeIcon} alt="" />
-          </button>
-          <ul className="nav-list">
-            <li>
-              <a href="#">Collections</a>
-            </li>
-            <li>
-              <a href="#">Men</a>
-            </li>
-            <li>
-              <a href="#">Women</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        <div className="mobile-menu">
+          <nav>
+            <button className="close-btn">
+              <img src={closeIcon} alt="" />
+            </button>
+            <ul className="nav-list">
+              <li>
+                <a href="#">Collections</a>
+              </li>
+              <li>
+                <a href="#">Men</a>
+              </li>
+              <li>
+                <a href="#">Women</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <button></button>
+        </div>
       </div>
 
       <div className="header-col cart-reference">
