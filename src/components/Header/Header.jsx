@@ -2,7 +2,7 @@ import menuIconUrl from "../../assets/icon-menu.svg"
 import logoUrl from "../../assets/logo.svg"
 import cartUrl from "../../assets/icon-cart.svg"
 import { assetsBaseUrl, loggedInUser } from "../../data"
-import "./Header.css"
+import "../../styles/Header.css"
 
 export const Header = () => {
   return (

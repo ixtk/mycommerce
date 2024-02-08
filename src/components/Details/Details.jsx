@@ -1,4 +1,4 @@
-import "./Details.css"
+import "../../styles/Details.css"
 
 export const ProductDetails = () => {
   return (
