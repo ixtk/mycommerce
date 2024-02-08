@@ -1,4 +1,5 @@
-import "../../styles/Details.css"
+import "../styles/Details.css"
+import { CartInputs } from "./CartInputs"
 
 export const ProductDetails = () => {
   return (
@@ -10,6 +11,14 @@ export const ProductDetails = () => {
         Featuring a durable rubber outer sole, they’ll withstand everything the
         weather can offer.
       </p>
+      <div className="price-container">
+        <div>
+          <span className="price">$125.00</span>
+          <span className="discount-indicator">50%</span>
+        </div>
+        <s className="old-price">$250</s>
+      </div>
+      <CartInputs />
     </div>
   )
 }

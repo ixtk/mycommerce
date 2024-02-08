@@ -1,7 +1,7 @@
-import "../../styles/ImageCarousel.css"
-import prevIconUrl from "../../assets/icon-previous.svg"
-import nextIconUrl from "../../assets/icon-next.svg"
-import { assetsBaseUrl, product } from "../../data"
+import "../styles/ImageCarousel.css"
+import prevIconUrl from "../assets/icon-previous.svg"
+import nextIconUrl from "../assets/icon-next.svg"
+import { assetsBaseUrl, product } from "../data"
 
 export const ImageCarousel = () => {
   return (

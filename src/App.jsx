@@ -1,17 +1,19 @@
 import { useState } from "react"
 import "./styles/App.css"
-import { Header } from "./components/Header/Header"
-import { ImageCarousel } from "./components/Carousel/ImageCarousel"
-import { ProductDetails } from "./components/Details/Details"
+import { Header } from "./components/Header"
+import { ImageCarousel } from "./components/ImageCarousel"
+import { ProductDetails } from "./components/Details"
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <Header />
       <main>
         <div className="product-container">
           <ImageCarousel />
-          <ProductDetails />
+          <div className="container">
+            <ProductDetails />
+          </div>
         </div>
       </main>
     </div>
