@@ -1,8 +1,9 @@
 import menuIconUrl from "../assets/icon-menu.svg"
 import logoUrl from "../assets/logo.svg"
 import cartUrl from "../assets/icon-cart.svg"
+import deleteUrl from "../assets/icon-delete.svg"
 import closeIcon from "../assets/icon-close.svg"
-import { assetsBaseUrl, loggedInUser } from "../data"
+import { assetsBaseUrl, loggedInUser, product } from "../data"
 import "../styles/Header.css"
 
 export const Header = () => {
@@ -46,7 +47,25 @@ export const Header = () => {
         </button>
         <div className="cart">
           <h3>Cart</h3>
-          <div className="cart-list"></div>
+          <div className="cart-list">
+            <div className="cart-item">
+              <img
+                className="cart-product-img"
+                src={`${assetsBaseUrl}/${product.images.thumbnails[0]}`}
+                alt=""
+              />
+              <div>
+                <p>Fall Limited Edition Sneakers</p>
+                <span>
+                  $125.00 x 3 <strong>$375.00</strong>
+                </span>
+              </div>
+              <button>
+                <img src={deleteUrl} alt="" />
+              </button>
+            </div>
+            <button className="checkout-btn">Checkout</button>
+          </div>
         </div>
         <img
           className="avatar-img"

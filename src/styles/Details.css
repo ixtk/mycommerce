@@ -17,6 +17,27 @@
   color: var(--dark-grayish-blue);
 }
 
+.description-container .rating {
+  background-color: var(--light-grayish-blue);
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: small;
+  line-height: 0;
+  border-radius: var(--border-radius);
+  padding: 4px 8px;
+  font-weight: 500;
+}
+
+.description-container .stars {
+  display: flex;
+  gap: 4px;
+}
+
+.description-container .rating svg {
+  max-width: 20px;
+}
+
 .price-container {
   display: flex;
   gap: 16px;

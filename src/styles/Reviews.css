@@ -28,6 +28,11 @@
   gap: 16px;
 }
 
+.review-list .stars {
+  display: flex;
+  gap: 4px;
+}
+
 .review img {
   max-width: 50px;
 }

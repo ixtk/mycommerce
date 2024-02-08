@@ -6,8 +6,8 @@ const StarIcon = ({ isFilled }) => {
       height="24"
       viewBox="0 0 24 24"
       fill={isFilled ? "var(--star-color)" : "none"}
-      stroke={isFilled ? "var(--star-color)" : "currentColor"}
-      strokeWidth="1"
+      stroke={isFilled ? "var(--star-color)" : "var(--dark-grayish-blue)"}
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -18,7 +18,7 @@ const StarIcon = ({ isFilled }) => {
 
 export const StarRating = ({ onClick, asButton = false, rating }) => {
   return (
-    <div>
+    <div className="stars">
       {[1, 2, 3, 4, 5].map((index) => {
         if (asButton) {
           return (
