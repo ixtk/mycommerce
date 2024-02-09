@@ -17,10 +17,16 @@ export const ReviewList = () => {
               }
               alt="User placeholder image"
             />
-            <h4 className="author">{review.user}</h4>
-            <StarRating rating={review.starRating} />
-            <h3>{review.headline}</h3>
-            <p>{review.writtenReview}</p>
+            <div>
+              <h4 className="author">{review.user}</h4>
+              <StarRating rating={review.starRating} />
+              <h3>{review.headline}</h3>
+              <p>{review.writtenReview}</p>
+            </div>
+            <div className="review-btns">
+              <button>Delete</button>
+              <button>Edit</button>
+            </div>
           </div>
         )
       })}

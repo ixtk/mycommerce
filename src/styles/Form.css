@@ -21,7 +21,7 @@ input,
 textarea {
   border: 1px solid var(--grayish-blue);
   width: 100%;
-  border-radius: 7px;
+  border-radius: var(--radius-secondary);
   padding: 9px 12px;
 }
 
@@ -39,10 +39,17 @@ form svg {
   padding: 5px;
 }
 
-/* .star-rating button  button svg {
+.star-rating .stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.star-rating button:hover ~ button svg,
+.star-rating button:hover svg {
   fill: var(--star-color);
   stroke: var(--star-color);
-} */
+}
 
 .error {
   color: var(--error);
@@ -61,9 +68,10 @@ form .button-container {
 }
 
 .button-container button {
-  padding: 9px 15px;
-  border-radius: 7px;
+  padding: 9px 20px;
+  border-radius: var(--radius-secondary);
   color: var(--white);
+  font-size: 0.9rem;
 }
 
 form .cancel {

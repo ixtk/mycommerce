@@ -76,7 +76,7 @@ export const ReviewForm = () => {
               <button className="cancel" type="button">
                 Cancel
               </button>
-              <button className="submit">Submit</button>
+              <button className="submit btn-primary">Submit</button>
             </div>
           </Form>
         )

@@ -7,7 +7,7 @@
 .quantity-btns {
   background-color: var(--light-grayish-blue);
   display: flex;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-primary);
   margin: 1rem 0;
 }
 
@@ -23,11 +23,17 @@
 }
 
 .cart-inputs .cart-btn {
-  background-color: var(--orange);
-  color: var(--white);
   width: 100%;
   padding: 16px 20px;
-  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0px 15px 30px -20px var(--orange);
+}
+
+.cart-inputs .cart-btn svg {
+  fill: var(--white);
 }
 
 @media only screen and (min-width: 900px) {

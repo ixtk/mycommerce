@@ -1,6 +1,6 @@
 import menuIconUrl from "../assets/icon-menu.svg"
 import logoUrl from "../assets/logo.svg"
-import cartUrl from "../assets/icon-cart.svg"
+import { cartIcon } from "./CartIcon"
 import deleteUrl from "../assets/icon-delete.svg"
 import closeIcon from "../assets/icon-close.svg"
 import { assetsBaseUrl, loggedInUser, product } from "../data"
@@ -42,9 +42,7 @@ export const Header = () => {
       </div>
 
       <div className="header-col cart-reference">
-        <button className="cart-btn">
-          <img src={cartUrl} alt="cart icon" />
-        </button>
+        <button className="cart-btn">{cartIcon}</button>
         <div className="cart">
           <h3>Cart</h3>
           <div className="cart-list">
@@ -64,7 +62,7 @@ export const Header = () => {
                 <img src={deleteUrl} alt="" />
               </button>
             </div>
-            <button className="checkout-btn">Checkout</button>
+            <button className="checkout-btn btn-primary">Checkout</button>
           </div>
         </div>
         <img

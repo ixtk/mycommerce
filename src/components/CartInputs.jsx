@@ -1,5 +1,6 @@
 import minusIcon from "../assets/icon-minus.svg"
 import plusIcon from "../assets/icon-plus.svg"
+import { cartIcon } from "./CartIcon"
 import "../styles/CartInputs.css"
 
 export const CartInputs = () => {
@@ -14,7 +15,10 @@ export const CartInputs = () => {
           <img src={plusIcon} alt="Plus icon" />
         </button>
       </div>
-      <button className="cart-btn">Add to cart</button>
+      <button className="cart-btn btn-primary">
+        {cartIcon}
+        <span>Add to cart</span>
+      </button>
     </div>
   )
 }

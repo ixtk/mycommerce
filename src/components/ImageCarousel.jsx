@@ -22,7 +22,7 @@ export const ImageCarousel = () => {
       <div className="thumbnails">
         {product.images.thumbnails.map((thumbnail, index) => {
           return (
-            <button key={index}>
+            <button key={index} className={index === 1 && "active"}>
               <img src={`${assetsBaseUrl}/${thumbnail}`} alt="" />
             </button>
           )

@@ -57,6 +57,22 @@
   overflow: hidden;
 }
 
+.thumbnails img {
+  transition: opacity 100ms;
+}
+
+.thumbnails button:hover img {
+  opacity: 0.5;
+}
+
+.thumbnails button.active {
+  border: 3px solid var(--orange);
+}
+
+.thumbnails button.active img {
+  opacity: 0.5;
+}
+
 @media only screen and (min-width: 900px) {
   .control-btn {
     display: none;

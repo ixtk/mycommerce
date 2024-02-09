@@ -14,7 +14,8 @@
   --white: hsl(0, 0%, 100%);
   --star-color: hsl(51, 96%, 51%);
   --error: hsl(0, 100%, 59%);
-  --border-radius: 12px;
+  --radius-primary: 12px;
+  --radius-secondary: 7px;
 }
 
 body {
@@ -63,6 +64,27 @@ button {
 
 .container {
   padding: 0 16px;
+}
+
+.btn-primary {
+  background-color: var(--orange);
+  color: var(--white);
+  border-radius: var(--radius-primary);
+  font-weight: 700;
+}
+
+.cart-inputs button,
+form .button-container button,
+.list-header button,
+.checkout-btn {
+  transition: opacity 100ms;
+}
+
+.cart-inputs button:hover,
+form .button-container button:hover,
+.list-header button:hover,
+.checkout-btn:hover {
+  opacity: 0.7;
 }
 
 @media only screen and (min-width: 900px) {

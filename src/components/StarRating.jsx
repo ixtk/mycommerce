@@ -23,7 +23,7 @@ export const StarRating = ({ onClick, asButton = false, rating }) => {
         if (asButton) {
           return (
             <button
-              onClick={() => onClick("starRating", index)}
+              onClick={() => onClick("starRating", index, false)}
               type="button"
               key={index}
             >

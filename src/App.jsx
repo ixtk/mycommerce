@@ -13,14 +13,12 @@ function App() {
       <main>
         <div className="product-container">
           <ImageCarousel />
-          <div className="container">
-            <ProductDetails />
-          </div>
+          <ProductDetails />
         </div>
         <div className="container review-container">
           <div className="list-header">
             <h2>Customer reviews</h2>
-            <button className="add-btn">
+            <button className="add-btn btn-primary">
               <span className="short">Add</span>
               <span className="long">Write a review</span>
             </button>
