@@ -58,7 +58,7 @@ header {
 header nav {
   position: fixed;
   display: flex;
-  padding: 16px;
+  padding: 16px 24px;
   flex-direction: column;
   gap: 32px;
   background-color: var(--white);
@@ -84,11 +84,11 @@ header .close-btn {
   width: 100%;
 }
 
-.mobile-menu {
-  display: flex;
+.menu {
+  display: none;
 }
 
-.mobile-menu > button {
+.menu > button {
   padding: 0;
   background: hsla(0, 0%, 0%, 0.447);
   position: fixed;
@@ -97,7 +97,6 @@ header .close-btn {
   right: 0;
   bottom: 0;
   z-index: 50;
-  display: none;
 }
 
 .cart-list {
@@ -131,6 +130,18 @@ header .close-btn {
   margin-top: 1rem;
 }
 
+.overlay-btn {
+  cursor: auto;
+}
+
+.menu.visible {
+  display: flex;
+}
+
+.close-btn.visible {
+  display: block;
+}
+
 @media only screen and (min-width: 500px) {
   .cart {
     min-width: 300px;
@@ -141,6 +152,15 @@ header .close-btn {
 }
 
 @media only screen and (min-width: 900px) {
+  .menu {
+    display: flex;
+  }
+
+  .menu > button,
+  .close-btn.visible {
+    display: none;
+  }
+
   .logo {
     transform: translateY(-4px);
   }
