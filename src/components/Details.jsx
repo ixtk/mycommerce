@@ -3,7 +3,7 @@ import "../styles/Details.css"
 import { CartInputs } from "./CartInputs"
 import { StarRating } from "./StarRating"
 
-export const ProductDetails = () => {
+export const ProductDetails = ({ setQuantityInCart }) => {
   const [quantitySelected, setQuantitySelected] = useState(0)
 
   return (
@@ -29,6 +29,7 @@ export const ProductDetails = () => {
       <CartInputs
         quantitySelected={quantitySelected}
         setQuantitySelected={setQuantitySelected}
+        setQuantityInCart={setQuantityInCart}
       />
     </div>
   )

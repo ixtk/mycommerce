@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 const StarIcon = ({ isFilled }) => {
   return (
     <svg
@@ -16,23 +18,34 @@ const StarIcon = ({ isFilled }) => {
   )
 }
 
-export const StarRating = ({ onClick, asButton = false, rating }) => {
+export const StarRating = ({
+  onClick: setFieldValue,
+  asButton = false,
+  rating
+}) => {
+  const [hoveredStars, setHoveredStars] = useState(rating)
+
+  const onStarClick = (index) => {
+    setFieldValue("starRating", index, false)
+    setHoveredStars(index)
+  }
+
   return (
-    <div className="stars">
-      {[1, 2, 3, 4, 5].map((index) => {
+    <div className="stars" onMouseLeave={() => setHoveredStars(rating)}>
+      {[1, 2, 3, 4, 5].map((starIndex) => {
         if (asButton) {
           return (
-            // flex-direction: row-reverse 😑
             <button
-              onClick={() => onClick("starRating", index, false)}
+              onClick={() => onStarClick(starIndex)}
+              onMouseOver={() => setHoveredStars(starIndex)}
               type="button"
-              key={index}
+              key={starIndex}
             >
-              <StarIcon isFilled={index <= rating} />
+              <StarIcon isFilled={starIndex <= hoveredStars} />
             </button>
           )
         }
-        return <StarIcon key={index} isFilled={index <= rating} />
+        return <StarIcon key={starIndex} isFilled={starIndex <= rating} />
       })}
     </div>
   )
