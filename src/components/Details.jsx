@@ -2,7 +2,7 @@ import "../styles/Details.css"
 import { CartInputs } from "./CartInputs"
 import { StarRating } from "./StarRating"
 
-export const ProductDetails = () => {
+export const ProductDetails = (props) => {
   return (
     <div className="description-container">
       <h2>sneaker company</h2>
@@ -23,7 +23,11 @@ export const ProductDetails = () => {
         </div>
         <s className="old-price">$250</s>
       </div>
-      <CartInputs />
+      <CartInputs
+        quantitySelected={props.quantitySelected}
+        setQuantitySelected={props.setQuantitySelected}
+        setQuantityInCart={props.setQuantityInCart}
+      />
     </div>
   )
 }

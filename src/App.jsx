@@ -7,13 +7,23 @@ import { ReviewList } from "./components/ReviewList"
 import { ReviewForm } from "./components/ReviewForm"
 
 function App() {
+  const [quantitySelected, setQuantitySelected] = useState(0)
+  const [quantityInCart, setQuantityInCart] = useState(0)
+
   return (
     <div>
-      <Header />
+      <Header
+        setQuantityInCart={setQuantityInCart}
+        quantityInCart={quantityInCart}
+      />
       <main>
         <div className="product-container">
           <ImageCarousel />
-          <ProductDetails />
+          <ProductDetails
+            quantitySelected={quantitySelected}
+            setQuantitySelected={setQuantitySelected}
+            setQuantityInCart={setQuantityInCart}
+          />
         </div>
         <div className="container review-container">
           <div className="list-header">

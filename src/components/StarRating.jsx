@@ -22,6 +22,7 @@ export const StarRating = ({ onClick, asButton = false, rating }) => {
       {[1, 2, 3, 4, 5].map((index) => {
         if (asButton) {
           return (
+            // flex-direction: row-reverse 😑
             <button
               onClick={() => onClick("starRating", index, false)}
               type="button"
