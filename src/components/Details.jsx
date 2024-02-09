@@ -1,8 +1,11 @@
+import { useState } from "react"
 import "../styles/Details.css"
 import { CartInputs } from "./CartInputs"
 import { StarRating } from "./StarRating"
 
-export const ProductDetails = (props) => {
+export const ProductDetails = () => {
+  const [quantitySelected, setQuantitySelected] = useState(0)
+
   return (
     <div className="description-container">
       <h2>sneaker company</h2>
@@ -24,9 +27,8 @@ export const ProductDetails = (props) => {
         <s className="old-price">$250</s>
       </div>
       <CartInputs
-        quantitySelected={props.quantitySelected}
-        setQuantitySelected={props.setQuantitySelected}
-        setQuantityInCart={props.setQuantityInCart}
+        quantitySelected={quantitySelected}
+        setQuantitySelected={setQuantitySelected}
       />
     </div>
   )

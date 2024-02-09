@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import { string, number, object } from "yup"
 import { StarRating } from "./StarRating"
+import { loggedInUser } from "../data"
 import "../styles/Form.css"
 
 const reviewSchema = object({
@@ -21,12 +22,41 @@ const initialValues = {
   writtenReview: ""
 }
 
-export const ReviewForm = () => {
+export const ReviewForm = ({
+  reviews,
+  setFormVisible,
+  reviewToEdit,
+  setReviewToEdit,
+  setReviews
+}) => {
+  const onFormSubmit = (reviewValues) => {
+    if (reviewToEdit) {
+      const editedReviews = reviews.map((review) => {
+        if (review.user === loggedInUser.name) {
+          return reviewValues
+        }
+        return review
+      })
+
+      setReviews(editedReviews)
+    } else {
+      setReviews([{ ...reviewValues, user: loggedInUser.name }, ...reviews])
+    }
+    setFormVisible(false)
+    setReviewToEdit(null)
+  }
+
+  const onFormCancel = () => {
+    setFormVisible(false)
+    setReviewToEdit(null)
+  }
+
   return (
     <Formik
-      initialValues={initialValues}
+      initialValues={reviewToEdit || initialValues}
       validationSchema={reviewSchema}
       validateOnBlur={false}
+      onSubmit={onFormSubmit}
     >
       {(formik) => {
         return (
@@ -73,7 +103,7 @@ export const ReviewForm = () => {
               </div>
             </div>
             <div className="button-container">
-              <button className="cancel" type="button">
+              <button className="cancel" type="button" onClick={onFormCancel}>
                 Cancel
               </button>
               <button className="submit btn-primary">Submit</button>
