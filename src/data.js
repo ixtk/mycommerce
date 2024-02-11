@@ -9,10 +9,10 @@ export const loggedInUser = {
 export const product = {
   images: {
     thumbnails: [
-      "image-product-4-thumbnail.jpg",
-      "image-product-3-thumbnail.jpg",
+      "image-product-1-thumbnail.jpg",
       "image-product-2-thumbnail.jpg",
-      "image-product-1-thumbnail.jpg"
+      "image-product-3-thumbnail.jpg",
+      "image-product-4-thumbnail.jpg"
     ],
     originals: [
       "image-product-1.jpg",
