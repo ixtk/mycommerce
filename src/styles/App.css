@@ -38,6 +38,10 @@ img {
   display: block;
 }
 
+main {
+  padding-bottom: 32px;
+}
+
 button,
 input,
 textarea {
